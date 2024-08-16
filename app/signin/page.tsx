@@ -44,7 +44,7 @@ export default function SignIn() {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        router.push('/'); // Redirect to home page or another page after sign-in
+        router.push('/pantry'); // Redirect to home page or another page after sign-in
         console.log(user);
       })
       .catch((error) => {
@@ -106,7 +106,7 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={() => router.push('/pantry')}
+              
             >
               Sign In
             </Button>

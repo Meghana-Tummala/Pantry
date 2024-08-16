@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Button, Grid, Modal, Stack, TextField, Typography } from '@mui/material';
+import { Box, Button, Grid, IconButton, Modal, Stack, TextField, Typography } from '@mui/material';
 import { deleteDoc, doc, getDoc, setDoc } from 'firebase/firestore';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
@@ -11,6 +11,7 @@ import { Syne, Archivo_Narrow } from 'next/font/google';
 import { useRouter} from 'next/navigation'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import React from 'react';
 
@@ -131,8 +132,18 @@ export default function Home() {
       sx={{backgroundImage:"url('/pantry-bg.jpg')", backgroundSize: 'cover', backgroundRepeat: 'no-repeat',
         bgcolor: theme.palette.background.default}}
     >
-     
-
+      <IconButton
+            size="large"
+            edge="end"
+            color="primary"
+            aria-label="home"
+            
+            sx={{ ml: 150}}
+            onClick={()=> {router.push("/")}}
+          >
+            <AccountCircleIcon />
+          </IconButton>  
+      
       <Stack direction="row" spacing={4} padding={3} paddingRight={4}>
       <Typography variant="h1" component="h2" color={"#69233E"} fontFamily={`${archivoNarrow.style.fontFamily}, sans-serif`} fontWeight={700}>
         ORGANISE YOUR PANTRY

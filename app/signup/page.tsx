@@ -45,7 +45,7 @@ export default function SignUp() {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       console.log(user);
-      router.push('/signin'); // Redirect to sign-in page after successful signup
+      router.push('/pantry'); // Redirect to sign-in page after successful signup
     } catch (error) {
       console.error('Error signing up:', error);
     }
@@ -108,7 +108,7 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={() => router.push('/pantry')}
+              
             >
               Sign Up
             </Button>
