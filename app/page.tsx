@@ -43,7 +43,7 @@ export default function QuiltedImageList() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color:'#0000FF' }}>
             My Pantry
           </Typography>
-          <Button color="primary">Login</Button>
+          <Button color="primary" onClick={() => router.push('/signin')}>Login</Button>
         </Toolbar>
       </AppBar>
     </Box>  

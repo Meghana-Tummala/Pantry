@@ -106,7 +106,7 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/pantry')}
             >
               Sign In
             </Button>
