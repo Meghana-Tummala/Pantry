@@ -8,7 +8,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { firestore } from '../firebase';
 import { Syne, Archivo_Narrow } from 'next/font/google';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation'
+import { useRouter} from 'next/navigation'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -65,8 +65,6 @@ const style = {
 export default function Home() {
   
   const router = useRouter();
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
   const [pantry, setPantry] = useState<any[]>([]);
   const [newItem, setNewItem] = useState(''); // State for new item input
   const [open, setOpen] = useState(false);
